@@ -1,0 +1,15 @@
+apply plugin: 'application'
+
+mainClassName = 'moe.pine.rxnight.Main'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.reactivex:rxjava:1.0.15'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.8'
+}
