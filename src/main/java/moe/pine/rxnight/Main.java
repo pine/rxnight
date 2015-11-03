@@ -16,6 +16,21 @@ public class Main {
             }
         });
 
+        Observable
+            .create(new Observable.OnSubscribe<String>() {
+                @Override
+                public void call(final Subscriber<? super String> observer) {
+                    observer.onNext("yano");
+                    observer.onCompleted();
+                }
+            })
+            .subscribe(new Action1<String>() {
+                @Override
+                public void call(String name) {
+                    System.out.println("Hello, " + name + "!"); // Hello yano
+                }
+            });
+
         // Observable.from
         String[] names = {"miyamori", "ema", "zuka"};
         Observable.from(names).subscribe(new Action1<String>() {
