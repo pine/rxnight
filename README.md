@@ -11,5 +11,9 @@ $ ./gradlew run
 
 - Java 7 ~
 
+### 発表資料
+
+- [RxJava での Observable のつくりかた](https://speakerdeck.com/pine613/rxjava-defalse-observable-falsetukurikata)
+
 ### ライセンス
 Public Domain
